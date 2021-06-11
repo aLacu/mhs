@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>unibs.dii</groupId>
-    <artifactId>task-scheduling</artifactId>
-    <version>5.0.0</version>
+    <artifactId>mhs</artifactId>
+    <version>1.0.0</version>
     <name>task-scheduling</name>
     <description>Springboot for optimization algorithm</description>
     <properties>
@@ -23,10 +23,21 @@
         </dependency>
 
         <dependency>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.71</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.leansoft</groupId>
+            <artifactId>bigqueue</artifactId>
+            <version>0.7.0</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -43,9 +54,23 @@
             <artifactId>spring-integration-core</artifactId>
             <version>5.3.6.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>repository.junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
+    <repositories>
+
+        <repository>
+            <id>github.release.repo</id>
+            <url>https://raw.github.com/bulldog2011/bulldog-repo/master/repo/releases/</url>
+        </repository>
+
+    </repositories>
     <build>
         <plugins>
             <plugin>
